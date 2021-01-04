@@ -1,0 +1,20 @@
+.wrapper{
+    height: 150px;
+    width: 150px;
+    background-color: blue;
+    border-radius: 100%;
+    margin-top: 15px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.containerwrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    background-color: mediumvioletred;
+    min-height: 550px;
+}
