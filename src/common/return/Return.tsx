@@ -3,11 +3,10 @@ import React from "react";
 import returnarrow from "../../icons/return.png";
 import {Link} from "react-router-dom";
 
-const Return = () => {
-
+const Return = (props) => {
     return(
         <div className={style.wrapper}>
-            <Link to='/'>
+            <Link to={props.link}>
                 <div>
                     <img src={returnarrow} alt="returnarrow"/>
                 </div>

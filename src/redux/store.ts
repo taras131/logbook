@@ -1,9 +1,13 @@
-import {createStore , combineReducers} from 'redux';
+import {createStore, combineReducers, applyMiddleware} from "redux";
+import thunkMiddleware from "redux-thunk";
 import carReducer from "./carReducer";
 
-const reducersList = combineReducers({
+let reducersList = combineReducers({
     carInformation: carReducer
-})
-const store = createStore(reducersList)
-export type StateType = ReturnType<typeof reducersList>
-export default store
+});
+type ReducersListType = typeof reducersList
+export type AppStateType = ReturnType<ReducersListType>
+let store = createStore(reducersList, applyMiddleware(thunkMiddleware));
+
+export default store;
+
