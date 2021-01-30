@@ -2,6 +2,7 @@ import style from "./MainMenu.module.css";
 import {Link} from "react-router-dom";
 import car from "../../../icons/car.png";
 import moto from "../../../icons/motociclet.png";
+import Add from "../../../common/add/Add";
 
 const MainMenu = () => {
     return (
@@ -16,12 +17,7 @@ const MainMenu = () => {
                     <img src={moto} alt="moto"/>
                 </div>
             </Link>
-            <Link to='/createmewobject'>
-                <div className={style.createmewobject}>
-                    <div className={style.line1}></div>
-                    <div className={style.line2}></div>
-                </div>
-            </Link>
+            <Add link = {'/createmewobject'} id={""}/>
         </div>
     )
 }

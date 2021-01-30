@@ -6,7 +6,7 @@ const MotoList = () => {
     return(
         <div className={style.wrapper}>
             MOTOLIST
-            <Return/>
+            <Return link={"/"}/>
         </div>
     )
 }

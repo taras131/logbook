@@ -18,14 +18,17 @@ type PropsType = {
     addCar: (brand: string, model: string, yearManufacture: string) => void
 }
 const CreateNewObject: FC<PropsType> = (props) => {
-    console.log(props)
     const submit = (values: AddCarFormType, {setSubmitting}: { setSubmitting: (isSubmitting: boolean) => void }) => {
         props.addCar(values.brand, values.model, values.yearManufacture)
         setSubmitting(false);
     }
+    let optionList: any = []
+    for (let i = 2000; i < 2022; i++) {
+        optionList.push(<option value={i}>{i}</option>)
+    }
     return (
         <div className={style.wrapper}>
-            <Return link = {"/"}/>
+            <Return link={"/"}/>
             <div>
                 <Formik
                     initialValues={{brand: '', model: '', yearManufacture: ``}}
@@ -34,15 +37,23 @@ const CreateNewObject: FC<PropsType> = (props) => {
                 >
                     {({isSubmitting}) => (
                         <Form className={style.form}>
-                            <div>Марка</div>
-                            <Field type="text" name="brand"/>
-                            <ErrorMessage name="brand" component="div"/>
-                            <div>Модель</div>
-                            <Field type="text" name="model"/>
-                            <ErrorMessage name="model" component="div"/>
-                            <div>Год выпуска</div>
-                            <Field type="text" name="yearManufacture"/>
-                            <ErrorMessage name="yearManufacture" component="div"/>
+                            <div className={style.form_item}>
+                                <div>Марка:</div>
+                                <Field className={style.form_field} type="text" name="brand"/>
+                                <ErrorMessage name="brand" component="div"/>
+                            </div>
+                            <div className={style.form_item}>
+                                <div>Модель:</div>
+                                <Field className={style.form_field} type="text" name="model"/>
+                                <ErrorMessage name="model" component="div"/>
+                            </div>
+                            <div className={style.form_item}>
+                                <div>Год выпуска:</div>
+                                <Field className={style.form_field} as="select" name="yearManufacture">
+                                    {optionList}
+                                </Field>
+                                <ErrorMessage name="yearManufacture" component="div"/>
+                            </div>
                             <button type="submit" disabled={isSubmitting}>
                                 Добавить
                             </button>

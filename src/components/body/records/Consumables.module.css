@@ -1,0 +1,24 @@
+.containerwrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    background-color: mediumvioletred;
+    min-height: 550px;
+}
+.consumables_items{
+    width: 350px;
+    margin-top: 20px;
+    padding: 7px;
+    font-size: 18px;
+    font-width: 700;
+    border: solid aqua;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: aqua;
+}
+.name{
+    font-width: 900;
+}

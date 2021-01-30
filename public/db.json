@@ -11,6 +11,62 @@
       "brand": "тойта",
       "model": "камри",
       "yearManufacture": "2006"
+    },
+    {
+      "id": 1612011756195,
+      "brand": "fdshs",
+      "model": "dsfhdsfh",
+      "yearManufacture": "2008"
+    }
+  ],
+  "consumables": [
+    {
+      "idCar": 1611932625175,
+      "name": "Vfckj",
+      "discription": "mobil3000",
+      "id": 1
+    },
+    {
+      "idCar": 1611932625175,
+      "name": "filtr",
+      "discription": "51252435245",
+      "id": 2
+    },
+    {
+      "idCar": 1611932625175,
+      "name": "тосол",
+      "discription": "север 200",
+      "id": 3
+    },
+    {
+      "idCar": 1611944913353,
+      "name": "Масло",
+      "discription": "Кастрол",
+      "id": 4
+    },
+    {
+      "idCar": 1611932625175,
+      "name": "ыфвапыфп",
+      "discription": "ыфвпфыпв",
+      "id": 5
+    },
+    {
+      "idCar": 1611932625175,
+      "name": "Воздушный фильтр",
+      "discription": "214213414-0453",
+      "id": 6
+    },
+    {
+      "idCar": 1611932625175,
+      "name": "Задние колодки",
+      "discription": "7H0-798496",
+      "id": 7
+    },
+    {
+      "idCar": 1611932625175,
+      "name": "tdsrh",
+      "discription": "tdrsh",
+      "id": 8
     }
   ]
 }

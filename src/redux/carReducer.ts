@@ -45,7 +45,7 @@ export const setIsLoading = (value: boolean): SetIsLoadingActionType => {
     return {type: SET_IS_LOADING, value}
 }
 
-export type GetCarsThunkActionType = ThunkAction<Promise<void>, AppStateType, any, ActionsTypes>
+type GetCarsThunkActionType = ThunkAction<Promise<void>, AppStateType, any, ActionsTypes>
 export const getCars = (): GetCarsThunkActionType => async (dispatch: any) => {
     dispatch(setIsLoading(true))
     let response = await carsAPI.getCars()

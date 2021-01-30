@@ -3,20 +3,31 @@ import axios from "axios";
 export const carsAPI = {
     async getCars() {
         const response = await axios.get(`http://localhost:3000/cars`)
-        console.log(response.data)
         return response.data
     },
     async addCar(brand, model, yearManufacture) {
         const id = (new Date()).getTime()
-        let response = await axios.post(`http://localhost:3000/cars`, {
+        await axios.post(`http://localhost:3000/cars`, {
             "id": id,
             "brand": brand,
             "model": model,
             "yearManufacture": yearManufacture
         })
-        console.log(response)
     },
     async deleteCar(id) {
         axios.delete(`http://localhost:3000/cars/${id}`);
+    }
+}
+export const consumablesAPI = {
+    async getConsumables(id) {
+        const response = await axios.get(`http://localhost:3000/consumables/?idCar=${id}`)
+        return response.data
+    },
+    async addConsumables(name, discription, id) {
+        await axios.post(`http://localhost:3000/consumables`, {
+            "idCar": id,
+            "name": name,
+            "discription": discription
+        })
     }
 }

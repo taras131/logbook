@@ -7,6 +7,7 @@ import style from "./carDiscription.module.css"
 import Return from "../../../../common/return/Return";
 import deleteicons from"../../../../icons/delete.png"
 import {deleteCar} from "../../../../redux/carReducer";
+import {NavLink} from "react-router-dom";
 
 type PathParamsType = {
     carId: string,
@@ -31,12 +32,12 @@ const CarDiscription: FC<PropsType> = (props) => {
             <div className={style.item}>Марка: {item.brand}</div>
             <div className={style.item}>Модель: {item.model}</div>
             <div className={style.item}>Год выпуска: {item.yearManufacture}</div>
-            <div className={`${style.menu} ${style.TO}`}>
+            <NavLink to = {"/carlist/cardiscription/consumables/"+id} className={`${style.menu} ${style.consumables}`}>
                 Расходные материалы
-            </div>
-            <div className={`${style.menu} ${style.writes}`}>
+            </NavLink >
+            <NavLink to = {"/cardiscription/consumables/"+id} className={`${style.menu} ${style.writes}`}>
                 Записи  ТО
-            </div>
+            </NavLink>
             <div className={`${style.menu} ${style.notes}`}>
                 Не забыть!
             </div>

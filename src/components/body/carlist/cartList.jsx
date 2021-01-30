@@ -4,10 +4,9 @@ import {useEffect} from "react";
 import {getCars} from "../../../redux/carReducer";
 import CarItem from "./carsdiscription/CarItem";
 import Return from "../../../common/return/Return";
-import {AppStateType} from "../../../redux/store"
 
 const CarList = () => {
-    const {carList, isLoading} = useSelector((state: AppStateType) => state.carInformation)
+    const {carList, isLoading} = useSelector((state) => state.carInformation)
     const dispatch = useDispatch()
     useEffect(()=>{
         dispatch(getCars())

@@ -1,0 +1,21 @@
+.createmewobject {
+    height: 150px;
+    width: 150px;
+    background-color: green;
+    border-radius: 100%;
+    margin-top: 60px;
+    padding: 10px;
+    cursor: pointer;
+}
+.line1{
+    height: 7px;
+    background-color: aqua;
+    transform: translateY(70px);
+    border-radius: 2px;
+}
+.line2{
+    height: 7px;
+    background-color: aqua;
+    transform: rotate(100grad) translate(65px ,-1px);
+    border-radius: 2px;
+}

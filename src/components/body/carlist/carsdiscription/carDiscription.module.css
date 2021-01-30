@@ -29,15 +29,19 @@
 img {
     height: 100px;
 }
-.TO{
+
+.consumables {
     background-color: green;
 }
-.delete{
+
+.delete {
     background-color: red;
 }
-.writes{
+
+.writes {
     background-color: dodgerblue;
 }
-.notes{
+
+.notes {
     background-color: orange;
 }

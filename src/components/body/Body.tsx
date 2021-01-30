@@ -4,6 +4,8 @@ import MotoList from "./motolist/MotoList";
 import CreateNewObject from "./createnewobject/CreateNewObject";
 import CarList from "./carlist/cartList";
 import CarDiscription from "./carlist/carsdiscription/CarDiscription";
+import Consumables from "./records/Consumables";
+import CreateNewConsumables from "./createnewobject/CreateNewConsumales";
 
 
 const Body = () => {
@@ -14,6 +16,8 @@ const Body = () => {
             <Route exact path='/motolist' component={MotoList}/>
             <Route exact path='/createmewobject' component={CreateNewObject}/>
             <Route exact path='/carlist/cardiscription/:carId?' component={CarDiscription}/>
+            <Route exact path='/carlist/cardiscription/consumables/:carId?' component={Consumables}/>
+            <Route exact path='/createnewconsumables/:carId?' component={CreateNewConsumables}/>
         </Switch>
     )
 }
