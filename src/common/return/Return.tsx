@@ -1,7 +1,7 @@
 import style from "./Return.module.css"
 import React, {FC} from "react";
 import returnarrow from "../../icons/return.png";
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 
 type PropsType = {
     link: string
@@ -9,13 +9,17 @@ type PropsType = {
 const Return: FC<PropsType> = (props) => {
     return(
         <div className={style.wrapper}>
-            <Link to={props.link}>
+            <NavLink to={props.link}>
                 <div>
                     <img src={returnarrow} alt="returnarrow"/>
                 </div>
-            </Link>
+            </NavLink>
         </div>
     )
 }
 
 export default Return
+
+//http://localhost:3000/carlist/cardiscription/technicalmaintenance/1611932625175
+//http://localhost:3000/carlist/cardiscription/technicalmaintenance/1611932625175
+//                     /carlist/cardiscription/technicalmaintenance/" + id

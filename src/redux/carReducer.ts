@@ -1,6 +1,7 @@
 import {carsAPI} from "../api/api";
 import {ThunkAction} from "redux-thunk";
 import {AppStateType} from "./store";
+import {setIsLoanding} from "./loadingReducer";
 
 const SET_IS_LOADING = "SET_IS_LOADING",
     SET_CARS = "SET_CARS"
@@ -12,10 +13,8 @@ export type CarType = {
 }
 type InitialStateType = {
     carList: Array<CarType>
-    isLoading: boolean
 }
 const initialState: InitialStateType = {
-    isLoading: false,
     carList: []
 }
 
@@ -23,13 +22,11 @@ const carReducer = (state = initialState, action: ActionsTypes) => {
     switch (action.type) {
         case SET_CARS:
             return {...state, carList: action.cars}
-        case  SET_IS_LOADING:
-            return {...state, isLoading: action.value}
         default:
             return state
     }
 }
-type ActionsTypes = SetCarsActionType | SetIsLoadingActionType
+type ActionsTypes = SetCarsActionType
 type SetCarsActionType = {
     type: typeof SET_CARS
     cars: Array<CarType>
@@ -37,30 +34,21 @@ type SetCarsActionType = {
 export const setCars = (cars: Array<CarType>): SetCarsActionType => {
     return {type: SET_CARS, cars}
 }
-type SetIsLoadingActionType = {
-    type: typeof SET_IS_LOADING
-    value: boolean
-}
-export const setIsLoading = (value: boolean): SetIsLoadingActionType => {
-    return {type: SET_IS_LOADING, value}
-}
-
 type GetCarsThunkActionType = ThunkAction<Promise<void>, AppStateType, any, ActionsTypes>
 export const getCars = (): GetCarsThunkActionType => async (dispatch: any) => {
-    dispatch(setIsLoading(true))
+    dispatch(setIsLoanding(true))
     let response = await carsAPI.getCars()
     dispatch(setCars(response))
-    dispatch(setIsLoading(false))
+    dispatch(setIsLoanding(false))
 }
 export const addCar = (brand: string, model: string, yearManufacture: string): GetCarsThunkActionType => async (dispatch: any) => {
-    console.log(brand, model)
-    dispatch(setIsLoading(true))
+    dispatch(setIsLoanding(true))
     await carsAPI.addCar(brand, model, yearManufacture)
-    dispatch(setIsLoading(false))
+    dispatch(setIsLoanding(false))
 }
 export const deleteCar = (id: number): GetCarsThunkActionType => async (dispatch: any) => {
-    dispatch(setIsLoading(true))
+    dispatch(setIsLoanding(true))
     await carsAPI.deleteCar(id)
-    dispatch(setIsLoading(false))
+    dispatch(setIsLoanding(false))
 }
 export default carReducer

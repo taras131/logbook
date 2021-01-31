@@ -1,4 +1,4 @@
-import {FC} from "react";
+import React, {FC} from "react";
 import {withRouter,Redirect} from "react-router-dom";
 import {RouteComponentProps} from "react-router";
 import {useDispatch, useSelector} from "react-redux";
@@ -8,6 +8,7 @@ import Return from "../../../../common/return/Return";
 import deleteicons from"../../../../icons/delete.png"
 import {deleteCar} from "../../../../redux/carReducer";
 import {NavLink} from "react-router-dom";
+import Preloader from "../../../../common/preloader/Preloader";
 
 type PathParamsType = {
     carId: string,
@@ -23,19 +24,20 @@ const CarDiscription: FC<PropsType> = (props) => {
     const dispatch = useDispatch()
     const onDeleteClick = () =>{
         dispatch(deleteCar(item.id))
-
     }
-    if(!item){return (<Redirect to ={"/carlist"}/>)}
+    const isLoading = useSelector((state: AppStateType) => state.loandingInformation.isLoading)
+    if(isLoading) {
+        return <Preloader/>
+    }
     return (
         <div className={style.wrapper}>
-            <Return link = {"/carlist"}/>
             <div className={style.item}>Марка: {item.brand}</div>
             <div className={style.item}>Модель: {item.model}</div>
             <div className={style.item}>Год выпуска: {item.yearManufacture}</div>
             <NavLink to = {"/carlist/cardiscription/consumables/"+id} className={`${style.menu} ${style.consumables}`}>
                 Расходные материалы
             </NavLink >
-            <NavLink to = {"/cardiscription/consumables/"+id} className={`${style.menu} ${style.writes}`}>
+            <NavLink to = {"/carlist/cardiscription/technicalmaintenance/"+id} className={`${style.menu} ${style.writes}`}>
                 Записи  ТО
             </NavLink>
             <div className={`${style.menu} ${style.notes}`}>
@@ -44,6 +46,7 @@ const CarDiscription: FC<PropsType> = (props) => {
             <div onClick={onDeleteClick} className={`${style.menu} ${style.delete}`}>
                 <img src={deleteicons} alt="delete"/>
             </div>
+            <Return link = {"/carlist"}/>
         </div>
     )
 }

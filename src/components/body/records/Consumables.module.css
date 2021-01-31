@@ -22,3 +22,17 @@
 .name{
     font-width: 900;
 }
+.tehnical_items{
+    width: 550px;
+    padding: 7px;
+    border: solid aqua;
+    border-radius: 6px;
+    margin-top: 15px;
+    color: aqua;
+    white-space: normal
+}
+.atribute{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

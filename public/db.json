@@ -17,56 +17,101 @@
       "brand": "fdshs",
       "model": "dsfhdsfh",
       "yearManufacture": "2008"
+    },
+    {
+      "id": 1612102055067,
+      "brand": "ГАЗ ",
+      "model": "330202",
+      "yearManufacture": "2012"
+    },
+    {
+      "id": 1612104329361,
+      "brand": "hjl",
+      "model": "hjlj",
+      "yearManufacture": "2007"
+    },
+    {
+      "id": 1612104334625,
+      "brand": "gfhk",
+      "model": "gk",
+      "yearManufacture": ""
     }
   ],
   "consumables": [
     {
-      "idCar": 1611932625175,
-      "name": "Vfckj",
-      "discription": "mobil3000",
+      "idCar": "1611932625175",
+      "name": "dsfgdsfg",
+      "discription": "dsfgsdf",
       "id": 1
     },
     {
-      "idCar": 1611932625175,
-      "name": "filtr",
-      "discription": "51252435245",
+      "idCar": "1611932625175",
+      "name": "sdfgsdfg",
+      "discription": "dfsgdsfg",
       "id": 2
     },
     {
-      "idCar": 1611932625175,
-      "name": "тосол",
-      "discription": "север 200",
+      "idCar": "1611932625175",
+      "name": "dfgj",
+      "discription": "fdgj",
       "id": 3
     },
     {
-      "idCar": 1611944913353,
-      "name": "Масло",
-      "discription": "Кастрол",
+      "idCar": "1611932625175",
+      "name": "xcbxz",
+      "discription": "xzcbxzc",
+      "id": 4
+    }
+  ],
+  "tehnical": [
+    {
+      "idCar": "1611932625175",
+      "date": "10-5-2015",
+      "odometer": "hds",
+      "discription": "hdsghf",
+      "id": 1
+    },
+    {
+      "idCar": "1611932625175",
+      "date": "10-5-2015",
+      "odometer": "5468745687",
+      "discription": "gfhkgkh",
+      "id": 2
+    },
+    {
+      "idCar": "1611932625175",
+      "date": "10-5-2015",
+      "odometer": "gfkjh",
+      "discription": "gfhk",
+      "id": 3
+    },
+    {
+      "idCar": "1611932625175",
+      "date": "3-5-2015",
+      "odometer": "gfhj",
+      "discription": "fgjh",
       "id": 4
     },
     {
-      "idCar": 1611932625175,
-      "name": "ыфвапыфп",
-      "discription": "ыфвпфыпв",
+      "idCar": "1611932625175",
+      "date": "11-5-2015",
+      "odometer": "dsfgdsfg",
+      "discription": "dfsgsdfg",
       "id": 5
     },
     {
-      "idCar": 1611932625175,
-      "name": "Воздушный фильтр",
-      "discription": "214213414-0453",
+      "idCar": "1611932625175",
+      "date": "16-5-2015",
+      "odometer": "4532453",
+      "discription": "dfgjdfgj",
       "id": 6
     },
     {
-      "idCar": 1611932625175,
-      "name": "Задние колодки",
-      "discription": "7H0-798496",
+      "idCar": "1611932625175",
+      "date": "1-5-2015",
+      "odometer": "dfgjdfgj",
+      "discription": "dfgjdfgj",
       "id": 7
-    },
-    {
-      "idCar": 1611932625175,
-      "name": "tdsrh",
-      "discription": "tdrsh",
-      "id": 8
     }
   ]
 }

@@ -2,8 +2,10 @@ import style from "./CreateNewObject.module.css"
 import Return from "../../../common/return/Return";
 import React, {FC} from "react";
 import {ErrorMessage, Field, Form, Formik} from "formik";
-import {connect} from "react-redux";
+import {connect, useSelector} from "react-redux";
 import {addCar} from "../../../redux/carReducer";
+import Preloader from "../../../common/preloader/Preloader";
+import {AppStateType} from "../../../redux/store";
 
 const addCarFormsValidation = (values: any) => {
     const errors = {};
@@ -25,6 +27,10 @@ const CreateNewObject: FC<PropsType> = (props) => {
     let optionList: any = []
     for (let i = 2000; i < 2022; i++) {
         optionList.push(<option value={i}>{i}</option>)
+    }
+    const isLoading = useSelector((state: AppStateType) => state.loandingInformation.isLoading)
+    if(isLoading) {
+        return <Preloader/>
     }
     return (
         <div className={style.wrapper}>

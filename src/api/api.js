@@ -29,5 +29,18 @@ export const consumablesAPI = {
             "name": name,
             "discription": discription
         })
+    },
+    async getTehnical(id) {
+        const response = await axios.get(`http://localhost:3000/tehnical/?idCar=${id}`)
+        return response.data
+    },
+    async addTehnical(date, discription,odometer, id) {
+        console.log(date)
+        await axios.post(`http://localhost:3000/tehnical`, {
+            "idCar": id,
+            "date": date,
+            "odometer": odometer,
+            "discription": discription
+        })
     }
 }
